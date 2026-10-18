@@ -1,0 +1,250 @@
+
+
+/*
+elemento {
+    propriedade: valor;
+}
+*/
+
+/*border-box faz com que o tamanho definido já inclua o padding e a borda. então e sempre bom começar com ele
+ "*" Todos os elementos */
+
+* {
+    box-sizing: border-box;
+}
+
+/*margin 0 evita espaços automaticamente,  background-color e a cor de fundo, font é a fonte e color vai ser a cor das letras*/
+
+body {
+    margin: 0;
+    background-color: #b3b7ce;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+}
+
+/*text-aling é texto e a forma que ele fica "centralizado" e o padding é o tamanho das bordas, faz com que o plano de fundo mude de tamanho*/
+/*background-size: cover; faz a imagem preencher todo o header, mesmo que precise cortar um pouco das laterais.*/
+/*background-position: center; mantém o centro da imagem como ponto principal.
+background-repeat: no-repeat; faz com que o fundo não repita a imagem para os lados
+padding: vertical horizontal;
+
+border-radius:
+canto-superior-esquerdo
+canto-superior-direito
+canto-inferior-direito
+canto-inferior-esquerdo;
+
+box-shadow: é a sobra
+horizontal
+vertical
+desfoque
+cor;*/
+
+header {
+    background-image: url(imagens/imagem1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 4px 12px rgba(46, 46, 46, 0.25);
+}
+
+/*font-size: 40px; tamanho da fonte
+margin-top: 0; é a distancia de cima da borda*/
+
+
+header h1 {
+    font-size: 40px;
+    color: rgb(255, 254, 254);
+    text-shadow: 2px 2px 6px rgb(0, 0, 0);
+    margin-top: 0;
+}
+
+/*max-width, é quanto o texto pode ocupar na horizontal
+margin: vertical horizontal; Cima e baixo → 30px Esquerda e direita → auto*/
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/*margin é a distancia de um elemento a outro*/
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    
+}
+
+/*O Flexbox é uma forma de organizar elementos.
+display: flex; Quero organizar os elementos filhos usando Flexbox.
+gap: 15px Cria espaço entre os elementos.
+flex-wrap: wrap; é para aparalhos com tela pequena, pode deixar o nome um em bauixo do outro*/
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+
+/*text-decoration: none; remove o sublinhado dos links
+font-weight: bold; deixa o texto em negriito 
+transition é a transição de cor quando passa o mouse por cima*/
+
+nav a {
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #1f5c8f;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/*font-size é o tamanho da fonte, nesse caso esta determinando o tamanho dos h*/
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+main h1 , h2 {
+    color: rgb(28, 95, 196);
+}
+
+main h3 {
+    color: rgb(13, 163, 50);
+}
+
+/*line é a distancia de uma liha a outra, uma distancia maior ajuda a visão em textos muitos*/
+
+p {
+    font-size: 17px;
+    line-height: 1.6;
+    text-indent: 30px;
+}
+
+/*a distancia de um elemeto a outro, nesse caso os elementos são os "li" que deixa as linhas um pouco mais distantes*/
+
+li {
+    margin-bottom: 8px;
+}
+
+/*o border faz com que as colunas fique de uma forma mais organizada e o width faz com que a tabela ocupe 100% da largura da tela*/
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+th,
+td {
+    border: 1px solid #cccccc;
+    padding: 15px;
+}
+
+th {
+    background-color: #1f5c8f;
+    color: white;
+    text-align: center;
+}
+
+td {
+    background-color: white;
+}
+
+tr:nth-child(even) td {
+    background-color: #dcecf6;
+}
+
+tr:hover td {
+    background-color: #c5e0ef;
+}
+
+
+/*
+| CSS                | O que faz                |
+| ------------------ | ------------------------ |
+| `color`            | Cor do texto             |
+| `background-color` | Cor do fundo             |
+| `font-family`      | Tipo da fonte            |
+| `font-size`        | Tamanho da fonte         |
+| `text-align`       | Alinhamento do texto     |
+| `padding`          | Espaço **dentro**        |
+| `margin`           | Espaço **fora**          |
+| `width`            | Largura                  |
+| `max-width`        | Largura máxima           |
+| `line-height`      | Espaçamento entre linhas |
+
+*/
+
+.cor {
+    color: green;
+}
+
+
+.corfundo {
+    background-color: rgba(255, 255, 255, 0.80);
+    padding: 3px;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+footer {
+    background-color: #333333;
+    text-align: center;
+    color: white;
+    padding: 15px 0px;
+    
+}
+
+
+.hrcor {
+
+    border: 2px solid #0a5fc0;
+    margin: 30px 0;
+}
+
+.hr {
+
+    border-top: 1px solid #cecdcd;
+    margin: 30px 0;
+}
+
+img {
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    display: block;
+    margin: 20px auto;
+
+
+}
